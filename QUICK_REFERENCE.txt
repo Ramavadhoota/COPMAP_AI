@@ -1,0 +1,86 @@
+
+╔═══════════════════════════════════════════════════════════════╗
+║          COPMAP AI - QUICK REFERENCE CARD                    ║
+╚═══════════════════════════════════════════════════════════════╝
+
+🚀 START SERVER
+═══════════════════════════════════════════════════════════════
+cd copmap-poc
+python3 -m uvicorn app.main:create_app --host 0.0.0.0 --port 8000 --factory
+
+📝 RUN TESTS
+═══════════════════════════════════════════════════════════════
+python3 test_video_processing.py
+
+✅ CHECK DEPENDENCIES
+═══════════════════════════════════════════════════════════════
+bash verify_install.sh
+
+📚 API DOCUMENTATION
+═══════════════════════════════════════════════════════════════
+Swagger: http://localhost:8000/docs
+ReDoc:   http://localhost:8000/redoc
+
+🎥 INGEST VIDEO
+═══════════════════════════════════════════════════════════════
+curl -X POST http://localhost:8000/api/v1/documents/ingest \
+  -H "Content-Type: application/json" \
+  -d '{
+    "doc_id": "video_001",
+    "doc_type": "video",
+    "content": "Video description here...",
+    "metadata": {
+      "video_name": "Name",
+      "location": "Location",
+      "officer_id": "OFF_001",
+      "timestamp": "2026-02-12 14:30:00"
+    }
+  }'
+
+🔍 SEARCH VIDEOS
+═══════════════════════════════════════════════════════════════
+curl -X POST http://localhost:8000/api/v1/rag/query \
+  -H "Content-Type: application/json" \
+  -d '{
+    "query": "traffic stop",
+    "k": 5,
+    "filters": {}
+  }'
+
+❤️ HEALTH CHECK
+═══════════════════════════════════════════════════════════════
+curl http://localhost:8000/health
+
+📂 SAMPLE VIDEOS
+═══════════════════════════════════════════════════════════════
+sample_videos/
+  ├─ video_001_metadata.json (Traffic Stop)
+  ├─ video_002_metadata.json (Park Disturbance)
+  ├─ video_003_metadata.json (Vehicle Inspection)
+  ├─ video_004_metadata.json (Suspicious Activity)
+  └─ README.md (Guide)
+
+📖 DOCUMENTATION
+═══════════════════════════════════════════════════════════════
+SETUP_AND_TESTING.md - Complete setup & API documentation
+
+🔧 KEY VERSIONS
+═══════════════════════════════════════════════════════════════
+• torch: 2.10.0+cpu
+• numpy: 1.26.4
+• transformers: 4.57.6
+• sentence-transformers: 2.7.0
+• chromadb: 1.5.0
+
+❓ TROUBLESHOOTING
+═══════════════════════════════════════════════════════════════
+Port in use:     lsof -i :8000 && kill -9 <PID>
+Missing torch:   pip install torch --index-url https://download.pytorch.org/whl/cpu
+Fix deps:        pip uninstall -y torch numpy transformers && pip install -r requirements.txt
+View logs:       tail -f copmap-poc/logs.txt (if enabled)
+
+═══════════════════════════════════════════════════════════════
+Last Updated: February 12, 2026
+Repository: COPMAP_AI - Main Branch
+Status: ✓ Production Ready
+
