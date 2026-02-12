@@ -1,0 +1,22 @@
+.DS_Store
+Thumbs.db
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.pytest_cache/
+.mypy_cache/
+
+# Virtual environments
+.venv/
+venv/
+copmap-poc/.venv/
+
+# Local env/config
+.env
+
+# Runtime and local data
+copmap-poc/data/
+

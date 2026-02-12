@@ -1,0 +1,12 @@
+services:
+  api:
+    image: copmap-poc-api:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    env_file:
+      - .env
+    volumes:
+      - ./data:/app/data
+    ports:
+      - "8000:8000"
