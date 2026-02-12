@@ -6,7 +6,11 @@ pydantic-settings>=2.0
 python-dotenv>=1.0
 httpx>=0.26
 
-chromadb>=0.5.0
-sentence-transformers>=2.6
+# ML and Embeddings (compatible versions)
+numpy==1.26.4
+torch==2.10.0  # CPU version
+transformers==4.57.6
+sentence-transformers==2.7.0
+chromadb>=0.4.0
 
 pytest>=8.0

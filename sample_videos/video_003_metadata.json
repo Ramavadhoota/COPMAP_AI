@@ -1,0 +1,18 @@
+{
+  "video_id": "video_003",
+  "video_name": "Highway Patrol - Vehicle Inspection",
+  "description": "Routine vehicle safety inspection on Highway 101. Faulty brake lights detected. Owner notified and ticket issued.",
+  "timestamp": "2026-02-12 16:20:00",
+  "location": "Highway 101 South",
+  "officer_id": "OFF_003",
+  "video_type": "body_cam",
+  "duration_seconds": 320,
+  "file_size_mb": 280,
+  "status": "processed",
+  "tags": [
+    "safety",
+    "vehicle_inspection",
+    "highway",
+    "equipment_violation"
+  ]
+}

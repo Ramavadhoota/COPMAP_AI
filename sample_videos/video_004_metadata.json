@@ -1,0 +1,18 @@
+{
+  "video_id": "video_004",
+  "video_name": "Downtown Patrol - Suspicious Activity",
+  "description": "Investigation of suspicious activity behind downtown buildings. Found discarded bag. Area secured pending investigation team arrival.",
+  "timestamp": "2026-02-12 17:00:00",
+  "location": "Downtown Industrial Area",
+  "officer_id": "OFF_001",
+  "video_type": "body_cam",
+  "duration_seconds": 650,
+  "file_size_mb": 520,
+  "status": "processed",
+  "tags": [
+    "suspicious_activity",
+    "investigation",
+    "evidence",
+    "downtown"
+  ]
+}

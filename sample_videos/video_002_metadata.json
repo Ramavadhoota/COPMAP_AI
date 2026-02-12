@@ -1,0 +1,18 @@
+{
+  "video_id": "video_002",
+  "video_name": "Park Patrol - Disturbance Call",
+  "description": "Response to disturbance call at Central Park. Two individuals arguing over parking. Situation resolved peacefully.",
+  "timestamp": "2026-02-12 15:45:00",
+  "location": "Central Park",
+  "officer_id": "OFF_002",
+  "video_type": "body_cam",
+  "duration_seconds": 580,
+  "file_size_mb": 450,
+  "status": "processed",
+  "tags": [
+    "disturbance",
+    "park",
+    "conflict_resolution",
+    "peaceful"
+  ]
+}
